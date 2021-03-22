@@ -38,7 +38,7 @@ const StyledHoneyPot = styled.p`
     ${tw`hidden`}
 `;
 
-export default function ContactForm({ formHeading }) {
+export default function ContactForm({ formHeading, buttonText }) {
     // const { formHeading } = content;
     const [formData, setFormData] = useState(null);
     const [isSubmitFormSuccessful, setIsSubmitFormSuccessful] = useState(false);
@@ -141,7 +141,7 @@ export default function ContactForm({ formHeading }) {
                                 />
                             </StyledLabel>
                     </InputWrapper>
-                    <StyledButton type="submit">deets plz</StyledButton>
+                    <StyledButton type="submit">{buttonText}</StyledButton>
                 </StyledForm>
             )}
         </ContactWrapper>
@@ -150,4 +150,6 @@ export default function ContactForm({ formHeading }) {
 
 ContactForm.propTypes = {
     formHeading: PropTypes.string.isRequired,
+    buttonText: PropTypes.string.isRequired,
+
 };

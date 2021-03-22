@@ -8,7 +8,8 @@ import SEO from "../components/seo"
 import Hero from '../components/hero'
 
 const copy = {
-        heading: 'For all inquiries, please fill out the form below and we’ll be in touch soon.'
+        heading: 'For all inquiries, please fill out the form below and we’ll be in touch soon.',
+        text: 'party time'
     
 }
 
@@ -18,7 +19,7 @@ export default function RentalPage({data}) {
       <Layout>
         <SEO title="Rental" />
         <Hero heroImage={heroImage}/>
-        <ContactForm formHeading={copy.heading} />
+        <ContactForm formHeading={copy.heading} buttonText={copy.text}/>
       </Layout>
     )
 } 
