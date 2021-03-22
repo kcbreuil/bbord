@@ -21,9 +21,8 @@ export default function ContactPage() {
     <Layout>
       <SEO title="Contact" />
       <h1>let's connect</h1>
-      <Draggable>
-          <Img fluid={logo} style={{ height: "200px"}} alt="logo" />
-      </Draggable>
+          <Img fluid={logo} alt="logo" />
+      
       <ContactForm />
     </Layout>
   )
