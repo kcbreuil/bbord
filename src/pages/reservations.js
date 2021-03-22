@@ -21,7 +21,7 @@ export default function ReservationsPage({data}) {
 
 export const query = graphql`
   query ReservationsPage {
-    heroImage: file(relativePath: { regex: "/bar/" }) {
+    heroImage: file(relativePath: { regex: "/couple/" }) {
       childImageSharp {
         fluid(maxWidth: 2000) {
           ...GatsbyImageSharpFluid

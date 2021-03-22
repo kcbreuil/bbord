@@ -25,7 +25,8 @@ export default function Info() {
             <StyledSubHeader>Open 7 days a week</StyledSubHeader>
             <StyledSubHeader>3 PM - 12 AM</StyledSubHeader>
             <br></br>
-            <StyledSubHeader>Happy Hour Monday thru Friday 3 PM - 8 PM</StyledSubHeader>
+            <StyledSubHeader>Happy Hour</StyledSubHeader>
+            <StyledSubHeader>Monday thru Friday <br></br>3 PM - 8 PM</StyledSubHeader>
             <br></br>
             <StyledSubHeader>729 sw 1st avenue miami fl 33130</StyledSubHeader>
         </StyledInfo>
