@@ -83,6 +83,7 @@ export default function ContactForm({ formHeading, buttonText }) {
                     onSubmit={handleSubmit}
                     data-netlify="true"
                     netlify-honeypot="bot-field"
+                    name="contact"
                 >
                     <StyledHoneyPot>
                         <label>

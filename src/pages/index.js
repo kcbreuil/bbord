@@ -5,12 +5,18 @@ import Layout from "../components/layout"
 import Map from "../components/map"
 import Hero from "../components/hero"
 import Info from '../components/info'
+import Quote from '../components/quote'
 
 export default function Home({ data }) {
-  const { heroImage } = data
+  const { heroImage, logo } = data
+  const content = {
+    quote:  'this is the way'
+  
+}
   return (
     <Layout>
       <Hero heroImage={heroImage} />
+      <Quote quote={content.quote} />
       <Info />
       <Map />
     </Layout>
@@ -22,6 +28,13 @@ export const query = graphql`
     heroImage: file(relativePath: { regex: "/bar/" }) {
       childImageSharp {
         fluid(maxWidth: 2000) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    logo: file(relativePath: { regex: "/logo/" }) {
+      childImageSharp {
+        fluid {
           ...GatsbyImageSharpFluid
         }
       }

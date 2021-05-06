@@ -6,7 +6,7 @@ import tw from "twin.macro"
 import Img from "gatsby-image"
 
 const StyledSection = styled.section`
-  ${tw`w-screen`}
+  ${tw`w-screen min-h-1/2-screen relative`}
 `
 
 export default function Hero({ heroImage }) {
@@ -22,5 +22,5 @@ export default function Hero({ heroImage }) {
 }
 
 Hero.propTypes = {
-    heroImage: PropTypes.object.isRequired,
+    heroImage: PropTypes.object.isRequired,  
 }

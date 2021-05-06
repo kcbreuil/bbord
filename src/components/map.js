@@ -13,6 +13,8 @@ const defaultProps = {
 const containerStyle = {
   height: '400px',
   width: '100vw',
+  textAlign: 'center',
+  margin: 'auto'
 };
 
 const AnyReactComponent = ({ text }) => <div style={{fontSize: '20px', color: 'black', textAlign: 'center'}}>{"🐦" + text}</div>

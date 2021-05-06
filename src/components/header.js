@@ -28,6 +28,12 @@ const StyledNav = styled.nav`
   align-items: center;
   padding: 5px;
   margin: 15px;
+  h1 {
+    font-size: 2rem;
+  }
+  h3 {
+    font-size: 1.25rem;
+  }
 `
 
 export default function Header({ siteTitle }) {

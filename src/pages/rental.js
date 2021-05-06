@@ -27,7 +27,7 @@ export default function RentalPage({data}) {
 
 export const query = graphql`
   query RentalPage {
-    heroImage: file(relativePath: { regex: "/bar/" }) {
+    heroImage: file(relativePath: { regex: "/party/" }) {
       childImageSharp {
         fluid(maxWidth: 2000) {
           ...GatsbyImageSharpFluid

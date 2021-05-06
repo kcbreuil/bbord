@@ -14,6 +14,8 @@ export default function ReservationsPage({data}) {
       <Layout>
         <SEO title="Reservations" />
         <Hero heroImage={heroImage}/>
+        <h1>Want to make a reservation?</h1>
+        <a href="https://www.exploretock.com/blackbirdordinary/">Click here</a>
       </Layout>
     )
 } 

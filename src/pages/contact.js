@@ -1,33 +1,49 @@
 import React from "react"
+import { graphql } from "gatsby"
+import PropTypes from "prop-types"
+import Img from "gatsby-image"
+import styled from "styled-components"
+
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import styled from "styled-components"
-import Img from 'gatsby-image'
 
-import logo from '../images/logo.png'
-import ContactForm from '../components/contactForm'
+import ContactForm from "../components/contactForm"
 
-const ContactStyle = styled.img`
+const ContactStyle = styled(Img)`
   display: flex;
   justify-content: center;
-  height: 250px;
-  margin-top: 150px;
-  margin-left: 50px;
 `
 
 const copy = {
-  heading: 'let\s connect',
-  text: 'submit'
-
+  heading: "lets connect",
+  text: "submit",
 }
 
-export default function ContactPage() {
+export default function ContactPage({ data }) {
+  const { logo } = data
   return (
     <Layout>
       <SEO title="Contact" />
-      <ContactStyle src={logo} alt="logo" />
-      <ContactForm formHeading={copy.heading} buttonText={copy.text}/>
+      <ContactStyle fluid={logo.childImageSharp.fluid} />
+      <ContactForm formHeading={copy.heading} buttonText={copy.text} />
     </Layout>
   )
-  
-} 
+}
+
+export const query = graphql`
+  query ContactPageQuery {
+    logo: file(relativePath: { regex: "/logoBird/" }) {
+      childImageSharp {
+        fluid {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+  }
+`
+
+ContactPage.propTypes = {
+  logo: PropTypes.shape({
+    childImageSharp: PropTypes.object.isRequired,
+  }).isRequired,
+}

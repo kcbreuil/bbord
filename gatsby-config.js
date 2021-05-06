@@ -19,14 +19,14 @@ module.exports = {
       resolve: `gatsby-plugin-web-font-loader`,
       options: {
         google: {
-          families: ["Special Elite", "Raleway Dots"],
+          families: ["Special Elite", "Raleway Dots", "Itim", "Open Sans Condensed"],
         },
       },
     },
     {
       resolve: "@ccalamos/gatsby-source-googlemaps-static",
       options: {
-        key: process.env.GATSBY_STATIC_API_KEY,
+        key: process.env.GATSBY_GOOGLE_API_KEY,
         center: "41.8781,-87.6298",
       },
     },
