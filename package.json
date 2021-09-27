@@ -16,7 +16,9 @@
   "dependencies": {
     "@ccalamos/gatsby-source-googlemaps-static": "^3.0.1",
     "@fontsource/itim": "^4.2.3",
-    "@fontsource/open-sans-condensed": "^4.2.2",
+    "@fontsource/montserrat": "^4.5.1",
+    "@fontsource/open-sans-condensed": "^4.5.0",
+    "@fontsource/special-elite": "^4.5.0",
     "@fortawesome/fontawesome-svg-core": "^1.2.35",
     "@fortawesome/free-brands-svg-icons": "^5.15.3",
     "@fortawesome/free-solid-svg-icons": "^5.15.3",

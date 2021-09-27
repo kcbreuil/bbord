@@ -11,28 +11,32 @@ const defaultProps = {
 }
 
 const containerStyle = {
-  height: '400px',
-  width: '100vw',
-  textAlign: 'center',
-  margin: 'auto'
-};
+  height: "400px",
+  width: "80%",
+  textAlign: "center",
+  margin: "auto",
+}
 
-const AnyReactComponent = ({ text }) => <div style={{fontSize: '20px', color: 'black', textAlign: 'center'}}>{"🐦" + text}</div>
+const AnyReactComponent = ({ text }) => (
+  <div style={{ fontSize: "20px", color: "black", textAlign: "center" }}>
+    {"🐦" + text}
+  </div>
+)
 
 export default function GoogleMaps() {
   return (
     <div style={containerStyle}>
-    <GoogleMapReact 
-      bootstrapURLKeys={{ key: `${process.env.GATSBY_GOOGLE_API_KEY}` }}
-      defaultCenter={defaultProps.center}
-      defaultZoom={defaultProps.zoom}
-    >
-       <AnyReactComponent
-        lat={25.766738}
-        lng={-80.195118}
-        text={'Blackbird Ordinary'}
-      />
-    </GoogleMapReact>
-  </div>
+      <GoogleMapReact
+        bootstrapURLKeys={{ key: `${process.env.GATSBY_GOOGLE_API_KEY}` }}
+        defaultCenter={defaultProps.center}
+        defaultZoom={defaultProps.zoom}
+      >
+        <AnyReactComponent
+          lat={25.766738}
+          lng={-80.195118}
+          text={"Blackbird Ordinary"}
+        />
+      </GoogleMapReact>
+    </div>
   )
 }

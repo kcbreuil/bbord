@@ -2,14 +2,14 @@ import React, { useState, useEffect } from "react"
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import styled from "styled-components"
-import tw from 'twin.macro'
+import tw from "twin.macro"
 
 const StyledHeader = styled.header`
-    ${tw`fixed transition w-full z-10`}
+  ${tw`fixed transition w-full z-10`}
 
-    background-color: ${({ isScrolled }) =>
-        isScrolled ? `#000000` : `#ffffff00`};
-`;
+  background-color: ${({ isScrolled }) =>
+    isScrolled ? `#000000` : `#ffffff00`};
+`
 
 const StyledNav = styled.nav`
   height: 100px;
@@ -61,7 +61,8 @@ export default function Header({ siteTitle }) {
           <Link to="/">{siteTitle}</Link>
         </h1>
         <h3>
-          <Link to="/reservations">reservations</Link>
+          {/* <Link to="/reservations">reservations</Link> */}
+          {/* <Link to="/#info">info</Link> */}
           <Link to="/rental">private events</Link>
           <Link to="/contact">contact</Link>
         </h3>

@@ -3,15 +3,25 @@ body {
   color: white;
   background: black;
   /* font-family: "Codystar", cursive; */
-  font-family: "Special Elite", cursive;
   /* font-family: "Itim", cursive; */
-  font-size: large;
+  font-family: "Montserrat";
+  font-size: larger;
+}
+
+h1, h2, h3, h4, h5, label {
+  font-family: "Special Elite", cursive;
+}
+
+.font {
+  font-family: "Montserrat";
 }
 
 .footer {
   margin-top: 100px;
   text-align: center;
+  font-family: "Montserrat";
 }
+
 
 .wrapper {
   /* height: 400px; */

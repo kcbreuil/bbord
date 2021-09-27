@@ -2,23 +2,26 @@ import React from "react"
 import { graphql } from "gatsby"
 import PropTypes from "prop-types"
 import Layout from "../components/layout"
-import Map from "../components/map"
 import Hero from "../components/hero"
 import Info from "../components/info"
-// import Quote from '../components/quote'
+import ContactForm from "../components/contactForm"
+import Quote from "../components/quote"
+import Map from "../components/map"
 
 export default function Home({ data }) {
   const { heroImage, logo } = data
-  //   const content = {
-  //     quote:  'Best place to party in Miami'
 
-  // }
+  const copy = {
+    heading: "lets connect",
+    text: "submit",
+  }
   return (
     <Layout>
       <Hero heroImage={heroImage} />
-      {/* <Quote quote={content.quote} /> */}
+      <Quote />
       <Info />
       <Map />
+      {/* <ContactForm formHeading={copy.heading} buttonText={copy.text} /> */}
     </Layout>
   )
 }
