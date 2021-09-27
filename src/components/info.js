@@ -7,7 +7,7 @@ const ContentWrapper = styled.section`
 
 `
 const StyledInfo = styled.div`
-  ${tw`border-4 border-opacity-5 w-3/12 p-8 place-self-center`} 
+  ${tw`border-2 border-opacity-5 w-3/12 p-8 place-self-center`} 
 
 font-family: 'Open Sans Condensed', sans-serif;
 `

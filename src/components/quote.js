@@ -4,7 +4,7 @@ import styled from "styled-components"
 import tw from "twin.macro"
 
 const StyledQuote = styled.blockquote`
-  ${tw`relative`}
+  ${tw`relative text-center`}
 
 
 &:before {

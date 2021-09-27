@@ -5,20 +5,22 @@ import Layout from "../components/layout"
 import Map from "../components/map"
 import Hero from "../components/hero"
 import Info from '../components/info'
-import Quote from '../components/quote'
+import MenuSection from '../components/menuSection'
+// import Quote from '../components/quote'
 
 export default function Home({ data }) {
   const { heroImage, logo } = data
-  const content = {
-    quote:  'this is the way'
+//   const content = {
+//     quote:  'Best place to party in Miami'
   
-}
+// }
   return (
     <Layout>
       <Hero heroImage={heroImage} />
-      <Quote quote={content.quote} />
+      {/* <Quote quote={content.quote} /> */}
       <Info />
       <Map />
+      <MenuSection />
     </Layout>
   )
 }
