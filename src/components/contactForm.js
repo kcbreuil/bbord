@@ -31,7 +31,7 @@ const StyledTextArea = styled.textarea`
 `
 
 const StyledLabel = styled.label`
-  ${tw`flex flex-col mb-4 mx-4 text-sm text-left`}
+  ${tw`flex flex-col mb-4 mx-4 text-lg text-left`}
 `
 
 const StyledHoneyPot = styled.p`
