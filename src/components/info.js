@@ -20,7 +20,7 @@ import Map from "./map"
 
 export default function Info() {
   return (
-    <section className="text-center divide-x my-20 grid grid-flow-col">
+    <section className="text-center md:divide-x my-20 grid grid-cols-1 md:grid-cols-3">
       <div className="my-4 ">
         <h3 className="text-yellow-500 text-4xl mb-4">Hours</h3>
         <p>Everyday: 3PM - 12AM</p>

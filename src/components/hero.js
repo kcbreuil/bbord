@@ -8,7 +8,7 @@ export default function Hero({ heroImage }) {
   } = heroImage
 
   return (
-    <section className="w-screen min-h-1/2-screen relative">
+    <section className="md:w-screen min-h-1/2-screen relative">
       <Img fluid={fluid} />
     </section>
   )

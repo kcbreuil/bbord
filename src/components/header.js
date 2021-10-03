@@ -4,6 +4,20 @@ import PropTypes from "prop-types"
 import styled from "styled-components"
 import tw from "twin.macro"
 
+import MainNav from "./nav/mainNav"
+import MobileNav from "./nav/mobileNav"
+
+const nav = [
+  {
+    name: "private events",
+    link: "/rental",
+  },
+  {
+    name: "contact",
+    link: "/contact",
+  },
+]
+
 const StyledHeader = styled.header`
   ${tw`fixed transition w-full z-10`}
 
@@ -38,6 +52,11 @@ const StyledNav = styled.nav`
 
 export default function Header({ siteTitle }) {
   const [isScrolled, setIsScrolled] = useState(false)
+  const [isMobileNavOpen, setIsMobileNavOpen] = useState(false)
+
+  const handleNavToggle = () => {
+    setIsMobileNavOpen(!isMobileNavOpen)
+  }
 
   const handleScroll = () => {
     if (window.scrollY > 10) {
@@ -55,19 +74,28 @@ export default function Header({ siteTitle }) {
     }
   })
   return (
-    <StyledHeader isScrolled={isScrolled}>
+    <nav
+      className={`fixed transition w-full z-10 ${
+        isScrolled ? "bg-black border-b-2" : "bg-transparent"
+      }`}
+      isScrolled={isScrolled}
+    >
       <StyledNav>
         <h1>
           <Link to="/">{siteTitle}</Link>
         </h1>
-        <h3>
-          {/* <Link to="/reservations">reservations</Link> */}
-          {/* <Link to="/#info">info</Link> */}
-          <Link to="/rental">private events</Link>
-          <Link to="/contact">contact</Link>
-        </h3>
+        <MobileNav
+          handleNavToggle={handleNavToggle}
+          isMobileNavOpen={isMobileNavOpen}
+          navItems={nav}
+        />
+        {/* <Link to="/reservations">reservations</Link> */}
+        {/* <Link to="/#info">info</Link> */}
+        {/* <Link to="/rental">private events</Link>
+          <Link to="/contact">contact</Link> */}
+        <MainNav navItems={nav} />
       </StyledNav>
-    </StyledHeader>
+    </nav>
   )
 }
 

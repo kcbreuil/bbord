@@ -31,21 +31,21 @@ export default function Footer() {
           target="_blank"
           rel="noreferrer"
         >
-          <FontAwesomeIcon icon={faFacebookF} />
+          <FontAwesomeIcon size="2x" icon={faFacebookF} />
         </a>
         <a
           href="https://twitter.com/BlackbirdO"
           target="_blank"
           rel="noreferrer"
         >
-          <FontAwesomeIcon icon={faTwitter} />
+          <FontAwesomeIcon size="2x" icon={faTwitter} />
         </a>
         <a
           href="https://www.instagram.com/blackbirdordinary/?hl=en"
           target="_blank"
           rel="noreferrer"
         >
-          <FontAwesomeIcon icon={faInstagram} />
+          <FontAwesomeIcon size="2x" icon={faInstagram} />
         </a>
       </StyledLinks>
       {/* <h5>729 SW 1st Avenue Miami FL 33130</h5>
