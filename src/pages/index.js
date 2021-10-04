@@ -4,24 +4,25 @@ import PropTypes from "prop-types"
 import Layout from "../components/layout"
 import Hero from "../components/hero"
 import Info from "../components/info"
-import ContactForm from "../components/contactForm"
 import Quote from "../components/quote"
 import Map from "../components/map"
+import SEO from "../components/seo"
+import Menus from "../components/menus"
+import PrivateEvents from "../components/privateEvents"
 
 export default function Home({ data }) {
-  const { heroImage, logo } = data
+  const { heroImage, couple } = data
 
-  const copy = {
-    heading: "lets connect",
-    text: "submit",
-  }
   return (
     <Layout>
-      <Hero heroImage={heroImage} />
+      <SEO title="Home" />
+      <Hero heroImage={heroImage} isHero />
       <Quote />
+      <Menus />
+      <Hero heroImage={couple} />
+      <PrivateEvents />
       <Info />
       <Map />
-      {/* <ContactForm formHeading={copy.heading} buttonText={copy.text} /> */}
     </Layout>
   )
 }
@@ -29,6 +30,13 @@ export default function Home({ data }) {
 export const query = graphql`
   query HomePage {
     heroImage: file(relativePath: { regex: "/bar/" }) {
+      childImageSharp {
+        fluid(maxWidth: 2000) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    couple: file(relativePath: { regex: "/couple/" }) {
       childImageSharp {
         fluid(maxWidth: 2000) {
           ...GatsbyImageSharpFluid

@@ -1,6 +1,8 @@
 import React from "react"
 
 import GoogleMapReact from "google-map-react"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faMapPin } from "@fortawesome/free-solid-svg-icons"
 
 const defaultProps = {
   center: {
@@ -18,9 +20,13 @@ const containerStyle = {
 }
 
 const AnyReactComponent = ({ text }) => (
-  <div style={{ fontSize: "20px", color: "black", textAlign: "center" }}>
-    {"🐦" + text}
-  </div>
+  <section
+    id="map"
+    style={{ fontSize: "16", color: "black", textAlign: "center" }}
+  >
+    <FontAwesomeIcon size="2x" icon={faMapPin} />
+    {text}
+  </section>
 )
 
 export default function GoogleMaps() {

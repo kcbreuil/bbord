@@ -47,7 +47,7 @@ export default function MobileNav({
         {navItems.map(item => {
           return (
             <li
-              className="text-black font-bold ml-8 mb-10 transition-colors duration-700 ease-in-out relative text-xl"
+              className="text-white ml-8 mb-10 transition-colors duration-700 ease-in-out relative text-xl hover:text-yellow-500 hover:opacity-100"
               key={item.name}
             >
               <Link to={item.link}>{item.name}</Link>

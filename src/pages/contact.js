@@ -8,10 +8,12 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 
 import ContactForm from "../components/contactForm"
+import Info from "../components/info"
 
 const ContactStyle = styled(Img)`
   display: flex;
   justify-content: center;
+  margin-top: 50px;
 `
 
 const copy = {
@@ -26,6 +28,7 @@ export default function ContactPage({ data }) {
       <SEO title="Contact" />
       <ContactStyle fluid={logo.childImageSharp.fluid} />
       <ContactForm formHeading={copy.heading} buttonText={copy.text} />
+      <Info />
     </Layout>
   )
 }

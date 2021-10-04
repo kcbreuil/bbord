@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from "react"
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
-import styled from "styled-components"
-import tw from "twin.macro"
+import Logo from "./svgs/Logo"
 
 import MainNav from "./nav/mainNav"
 import MobileNav from "./nav/mobileNav"
@@ -17,38 +16,6 @@ const nav = [
     link: "/contact",
   },
 ]
-
-const StyledHeader = styled.header`
-  ${tw`fixed transition w-full z-10`}
-
-  background-color: ${({ isScrolled }) =>
-    isScrolled ? `#000000` : `#ffffff00`};
-`
-
-const StyledNav = styled.nav`
-  height: 100px;
-  a {
-    text-decoration: none;
-    color: white;
-    margin-left: 20px;
-    opacity: 0.5;
-  }
-  a:hover {
-    color: rgb(244, 148, 39);
-    opacity: 1;
-  }
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 5px;
-  margin: 15px;
-  h1 {
-    font-size: 2rem;
-  }
-  h3 {
-    font-size: 1.25rem;
-  }
-`
 
 export default function Header({ siteTitle }) {
   const [isScrolled, setIsScrolled] = useState(false)
@@ -74,16 +41,21 @@ export default function Header({ siteTitle }) {
     }
   })
   return (
-    <nav
+    <header
       className={`fixed transition w-full z-10 ${
         isScrolled ? "bg-black border-b-2" : "bg-transparent"
       }`}
       isScrolled={isScrolled}
     >
-      <StyledNav>
-        <h1>
-          <Link to="/">{siteTitle}</Link>
-        </h1>
+      <nav className="h-24 flex justify-between items-center p-5 text-white opacity-80">
+        <Link
+          to="/"
+          className="text-2xl md:text-4xl hover:text-yellow-500 hover:opacity-100"
+        >
+          {/* {siteTitle} */}
+          <Logo fill="ffffff" />
+        </Link>
+
         <MobileNav
           handleNavToggle={handleNavToggle}
           isMobileNavOpen={isMobileNavOpen}
@@ -91,11 +63,9 @@ export default function Header({ siteTitle }) {
         />
         {/* <Link to="/reservations">reservations</Link> */}
         {/* <Link to="/#info">info</Link> */}
-        {/* <Link to="/rental">private events</Link>
-          <Link to="/contact">contact</Link> */}
         <MainNav navItems={nav} />
-      </StyledNav>
-    </nav>
+      </nav>
+    </header>
   )
 }
 

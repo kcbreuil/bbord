@@ -18,7 +18,7 @@ const StyledQuote = styled.blockquote`
 
 export default function Quote() {
   return (
-    <section className="h-screen flex self-center justify-center p-10">
+    <section className="h-1/2 flex self-center justify-center p-10">
       <StyledQuote className="relative self-center max-w-2xl p-10 border-t-2 border-b-2">
         <h2 className="relative text-4xl font-extrabold">
           Just like your neighborhood bar—but with a better looking clientele.
