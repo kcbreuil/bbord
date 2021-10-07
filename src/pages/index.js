@@ -29,7 +29,7 @@ export default function Home({ data }) {
 
 export const query = graphql`
   query HomePage {
-    heroImage: file(relativePath: { regex: "/bar/" }) {
+    heroImage: file(relativePath: { regex: "/blackbird/" }) {
       childImageSharp {
         fluid(maxWidth: 2000) {
           ...GatsbyImageSharpFluid
