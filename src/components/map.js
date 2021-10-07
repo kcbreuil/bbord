@@ -34,7 +34,7 @@ export default function GoogleMaps() {
   return (
     <section style={containerStyle}>
       <GoogleMapReact
-        // bootstrapURLKeys={{ key: `${process.env.GATSBY_GOOGLE_API_KEY}` }}
+        bootstrapURLKeys={{ key: `${process.env.GATSBY_GOOGLE_API_KEY}` }}
         defaultCenter={defaultProps.center}
         defaultZoom={defaultProps.zoom}
       >

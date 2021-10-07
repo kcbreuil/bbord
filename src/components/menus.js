@@ -34,7 +34,7 @@ export default function Menus() {
   return (
     <section className="px-4">
         <h2 className="text-yellow-500 text-center text-4xl pb-4">Menus</h2>
-        <div className="flex flex-col gap-4">
+        <div className="flex flex-col md:grid md:grid-flow-col gap-4">
           <button
             className="border-2 p-2 text-center hover:bg-yellow-500 hover:text-black"
             onClick={() => setCocktailsIsOpen(true)}

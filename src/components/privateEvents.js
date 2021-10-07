@@ -14,14 +14,14 @@ export default function PrivateEvents() {
         <p>
           Our space can accomodate up to xxxx people. Other sweet verbiage about
           why renting space at blackbird is an absolute must.
-          <div className="pt-10 mb-20">
+          <span className="pt-10 mb-20">
             <Link
               className="text-center border-white border-2 p-4"
               to="/rental"
             >
               Plan your event
             </Link>
-          </div>
+          </span>
         </p>
     </section>
   )
