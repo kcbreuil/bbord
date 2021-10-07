@@ -14,26 +14,27 @@ const defaultProps = {
 
 const containerStyle = {
   height: "400px",
-  width: "80%",
+  width: "100%",
   textAlign: "center",
-  margin: "auto",
+  paddingLeft: '1rem',
+  paddingRight: '1rem',
 }
 
 const AnyReactComponent = ({ text }) => (
-  <section
+  <div
     id="map"
-    style={{ fontSize: "16", color: "black", textAlign: "center" }}
+    style={{ fontSize: "24", fontFamily: 'Montserrat', color: "black", textAlign: "center" }}
   >
     <FontAwesomeIcon size="2x" icon={faMapPin} />
     {text}
-  </section>
+  </div>
 )
 
 export default function GoogleMaps() {
   return (
-    <div style={containerStyle}>
+    <section style={containerStyle}>
       <GoogleMapReact
-        bootstrapURLKeys={{ key: `${process.env.GATSBY_GOOGLE_API_KEY}` }}
+        // bootstrapURLKeys={{ key: `${process.env.GATSBY_GOOGLE_API_KEY}` }}
         defaultCenter={defaultProps.center}
         defaultZoom={defaultProps.zoom}
       >
@@ -43,6 +44,6 @@ export default function GoogleMaps() {
           text={"Blackbird Ordinary"}
         />
       </GoogleMapReact>
-    </div>
+    </section>
   )
 }

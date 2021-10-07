@@ -23,6 +23,7 @@
     "@fortawesome/free-brands-svg-icons": "^5.15.3",
     "@fortawesome/free-solid-svg-icons": "^5.15.3",
     "@fortawesome/react-fontawesome": "^0.1.14",
+    "@tailwindcss/typography": "^0.4.1",
     "dotenv": "^8.2.0",
     "gatsby": "^3.0.1",
     "gatsby-background-image": "^1.5.0",

@@ -24,8 +24,8 @@ const StyledFooter = styled.div`
 
 export default function Footer() {
   return (
-    <StyledFooter className="footer">
-      <StyledLinks className="footer-social footer-section">
+    <footer className="footer my-4 ">
+      <div className="footer-social footer-section my-4 text-white flex justify-center gap-16">
         <a
           href="https://www.facebook.com/blackbirdordinary"
           target="_blank"
@@ -47,10 +47,8 @@ export default function Footer() {
         >
           <FontAwesomeIcon size="2x" icon={faInstagram} />
         </a>
-      </StyledLinks>
-      {/* <h5>729 SW 1st Avenue Miami FL 33130</h5>
-      <h5 className="font">XXX.XXX.XXX | info@blackbirdordinary.com</h5> */}
+      </div>
       <h5>© {new Date().getFullYear()} Blackbird Ordinary</h5>
-    </StyledFooter>
+    </footer>
   )
 }

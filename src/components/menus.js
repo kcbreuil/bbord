@@ -32,73 +32,74 @@ export default function Menus() {
   const [bottlesModalIsOpen, setBottlesModalIsOpen] = useState(false)
 
   return (
-    <section id="rentals" className="my-20">
-      <h2 className="text-center text-yellow-500 text-4xl">Menus</h2>
-      <div className="grid grid-flow-col gap-4 m-4">
-        <button
-          className="border-2 p-2 text-center hover:bg-yellow-500 hover:text-black"
-          onClick={() => setCocktailsIsOpen(true)}
-        >
-          Cocktails
-        </button>
-        <Modal style={customStyles} isOpen={cocktailsIsOpen}>
+    <section className="px-4">
+        <h2 className="text-yellow-500 text-center text-4xl pb-4">Menus</h2>
+        <div className="flex flex-col gap-4">
           <button
-            className="text-black"
-            onClick={() => setCocktailsIsOpen(false)}
+            className="border-2 p-2 text-center hover:bg-yellow-500 hover:text-black"
+            onClick={() => setCocktailsIsOpen(true)}
           >
-            <FontAwesomeIcon icon={faTimesCircle} />
+            Cocktails
           </button>
-          <img src={cocktailMenu} />
-        </Modal>
-        <button
-          className="border-2 p-2 text-center hover:bg-yellow-500 hover:text-black"
-          onClick={() => setBeerIsOpen(true)}
-        >
-          Beer
-        </button>
-        <Modal style={customStyles} isOpen={beerIsOpen}>
-          <button className="text-black" onClick={() => setBeerIsOpen(false)}>
-            <FontAwesomeIcon icon={faTimesCircle} />
-          </button>
-          <img src={beerMenu} />
-        </Modal>
-        <button
-          className="border-2 p-2 text-center hover:bg-yellow-500 hover:text-black"
-          onClick={() => setWineModalIsOpen(true)}
-        >
-          Wine
-        </button>
-        <Modal style={customStyles} isOpen={wineModalIsOpen}>
+          <Modal style={customStyles} isOpen={cocktailsIsOpen}>
+            <button
+              className="text-black"
+              onClick={() => setCocktailsIsOpen(false)}
+            >
+              <FontAwesomeIcon icon={faTimesCircle} />
+            </button>
+            <img src={cocktailMenu} alt="cocktail menu" />
+          </Modal>
           <button
-            className="text-black"
-            onClick={() => setWineModalIsOpen(false)}
+            className="border-2 p-2 text-center hover:bg-yellow-500 hover:text-black"
+            onClick={() => setBeerIsOpen(true)}
           >
-            <FontAwesomeIcon icon={faTimesCircle} />
+            Beer
           </button>
-          <img src={wineMenu} />
-        </Modal>
-        <button
-          className="border-2 p-2 text-center hover:bg-yellow-500 hover:text-black"
-          onClick={() => setBottlesModalIsOpen(true)}
-        >
-          Bottles
-        </button>
-        <Modal style={customStyles} isOpen={bottlesModalIsOpen}>
+          <Modal style={customStyles} isOpen={beerIsOpen}>
+            <button className="text-black" onClick={() => setBeerIsOpen(false)}>
+              <FontAwesomeIcon icon={faTimesCircle} />
+            </button>
+            <img src={beerMenu} alt="beer menu" />
+          </Modal>
           <button
-            className="text-black"
-            onClick={() => setBottlesModalIsOpen(false)}
+            className="border-2 p-2 text-center hover:bg-yellow-500 hover:text-black"
+            onClick={() => setWineModalIsOpen(true)}
           >
-            <FontAwesomeIcon icon={faTimesCircle} />
+            Wine
           </button>
-          <img src={bottleMenu} />
-        </Modal>
-      </div>
-      <a
-        className="border-2 p-4 m-4 flex justify-center hover:bg-yellow-500 hover:text-black"
-        href="https://www.exploretock.com/blackbirdordinary/"
-      >
-        Make a reservation
-      </a>
+          <Modal style={customStyles} isOpen={wineModalIsOpen}>
+            <button
+              className="text-black"
+              onClick={() => setWineModalIsOpen(false)}
+            >
+              <FontAwesomeIcon icon={faTimesCircle} />
+            </button>
+            <img src={wineMenu} alt="wine menu" />
+          </Modal>
+          <button
+            className="border-2 p-2 text-center hover:bg-yellow-500 hover:text-black"
+            onClick={() => setBottlesModalIsOpen(true)}
+          >
+            Bottles
+          </button>
+          <Modal style={customStyles} isOpen={bottlesModalIsOpen}>
+            <button
+              className="text-black"
+              onClick={() => setBottlesModalIsOpen(false)}
+            >
+              <FontAwesomeIcon icon={faTimesCircle} />
+            </button>
+            <img src={bottleMenu} alt="bottle menu" />
+          </Modal>
+        </div>
+        <h3 className="text-center my-4">See something delicious?</h3>
+        <a
+          className="border-2 p-4 mt-4 mb-20 flex justify-center hover:bg-yellow-500 hover:text-black"
+          href="https://www.exploretock.com/blackbirdordinary/"
+        >
+          Make a reservation
+        </a>
     </section>
   )
 }

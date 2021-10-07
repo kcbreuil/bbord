@@ -19,7 +19,7 @@ const InputWrapper = styled.div`
 `
 
 const StyledButton = styled.button`
-  ${tw`border-2 cursor-pointer transition duration-500 ease-out py-2 px-6 text-black bg-gradient-to-r from-red-500 to-yellow-500 max-w-max mt-16 text-xl tracking-widest hover:bg-white`}
+  ${tw`border-2 text-white cursor-pointer transition duration-500 ease-out py-2 px-6 max-w-max mt-16 text-xl`}
 `
 
 const StyledInput = styled.input`

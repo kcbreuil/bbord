@@ -1,10 +1,9 @@
 import React from "react"
-import PropTypes from "prop-types"
 import styled from "styled-components"
 import tw from "twin.macro"
 
 const StyledQuote = styled.blockquote`
-  ${tw`relative`}
+  ${tw`relative self-center max-w-2xl p-10 border-t-2 border-b-2`}
 
   &:after {
     content: "”";
@@ -18,9 +17,9 @@ const StyledQuote = styled.blockquote`
 
 export default function Quote() {
   return (
-    <section className="h-1/2 flex self-center justify-center p-10">
-      <StyledQuote className="relative self-center max-w-2xl p-10 border-t-2 border-b-2">
-        <h2 className="relative text-4xl font-extrabold">
+    <section className="flex self-center justify-center py-20">
+      <StyledQuote>
+        <h2 className="relative text-3xl md:text-4xl font-extrabold">
           Just like your neighborhood bar—but with a better looking clientele.
         </h2>
         <h4 className="font relative pt-4 font-normal">
@@ -31,6 +30,3 @@ export default function Quote() {
   )
 }
 
-Quote.propTypes = {
-  quote: PropTypes.string.isRequired,
-}
