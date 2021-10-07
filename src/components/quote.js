@@ -3,7 +3,7 @@ import styled from "styled-components"
 import tw from "twin.macro"
 
 const StyledQuote = styled.blockquote`
-  ${tw`relative self-center max-w-2xl p-10 border-t-2 border-b-2`}
+  ${tw`relative`}
 
   &:after {
     content: "”";
@@ -18,7 +18,7 @@ const StyledQuote = styled.blockquote`
 export default function Quote() {
   return (
     <section className="flex self-center justify-center py-20">
-      <StyledQuote>
+      <StyledQuote className="self-center max-w-2xl p-10 border-t-2 border-b-2">
         <h2 className="relative text-3xl md:text-4xl font-extrabold">
           Just like your neighborhood bar—but with a better looking clientele.
         </h2>
