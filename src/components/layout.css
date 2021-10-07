@@ -2,8 +2,6 @@ html,
 body {
   color: white;
   background: black;
-  /* font-family: "Codystar", cursive; */
-  /* font-family: "Itim", cursive; */
   font-family: "Montserrat";
   font-size: larger;
 }
@@ -24,7 +22,6 @@ h1, h2, h3, h4, h5, label, nav {
 
 
 .wrapper {
-  /* height: 400px; */
   display: flex;
   align-items: center;
   justify-content: center;

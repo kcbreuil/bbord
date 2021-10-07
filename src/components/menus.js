@@ -2,7 +2,10 @@ import React, { useState } from "react"
 import beerMenu from "../images/beerMenu.png"
 import wineMenu from "../images/wineMenu.jpeg"
 import bottleMenu from "../images/bottleMenu.jpeg"
+import cocktailMenu from '../images/cocktailMenu.jpeg'
 import Modal from "react-modal"
+import { faTimesCircle } from "@fortawesome/free-solid-svg-icons"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 
 const customStyles = {
   content: {
@@ -23,6 +26,7 @@ const customStyles = {
 }
 
 export default function Menus() {
+  const [cocktailsIsOpen, setCocktailsIsOpen] = useState(false)
   const [beerIsOpen, setBeerIsOpen] = useState(false)
   const [wineModalIsOpen, setWineModalIsOpen] = useState(false)
   const [bottlesModalIsOpen, setBottlesModalIsOpen] = useState(false)
@@ -33,15 +37,30 @@ export default function Menus() {
       <div className="grid grid-flow-col gap-4 m-4">
         <button
           className="border-2 p-2 text-center hover:bg-yellow-500 hover:text-black"
+          onClick={() => setCocktailsIsOpen(true)}
+        >
+          Cocktails
+        </button>
+        <Modal style={customStyles} isOpen={cocktailsIsOpen}>
+          <button
+            className="text-black"
+            onClick={() => setCocktailsIsOpen(false)}
+          >
+            <FontAwesomeIcon icon={faTimesCircle} />
+          </button>
+          <img src={cocktailMenu} />
+        </Modal>
+        <button
+          className="border-2 p-2 text-center hover:bg-yellow-500 hover:text-black"
           onClick={() => setBeerIsOpen(true)}
         >
           Beer
         </button>
         <Modal style={customStyles} isOpen={beerIsOpen}>
-          <img src={beerMenu} />
           <button className="text-black" onClick={() => setBeerIsOpen(false)}>
-            Close
+            <FontAwesomeIcon icon={faTimesCircle} />
           </button>
+          <img src={beerMenu} />
         </Modal>
         <button
           className="border-2 p-2 text-center hover:bg-yellow-500 hover:text-black"
@@ -50,13 +69,13 @@ export default function Menus() {
           Wine
         </button>
         <Modal style={customStyles} isOpen={wineModalIsOpen}>
-          <img src={wineMenu} />
           <button
             className="text-black"
             onClick={() => setWineModalIsOpen(false)}
           >
-            Close
+            <FontAwesomeIcon icon={faTimesCircle} />
           </button>
+          <img src={wineMenu} />
         </Modal>
         <button
           className="border-2 p-2 text-center hover:bg-yellow-500 hover:text-black"
@@ -65,13 +84,13 @@ export default function Menus() {
           Bottles
         </button>
         <Modal style={customStyles} isOpen={bottlesModalIsOpen}>
-          <img src={bottleMenu} />
           <button
             className="text-black"
             onClick={() => setBottlesModalIsOpen(false)}
           >
-            Close
+            <FontAwesomeIcon icon={faTimesCircle} />
           </button>
+          <img src={bottleMenu} />
         </Modal>
       </div>
       <a
